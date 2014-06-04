@@ -1,0 +1,9 @@
+[data-role="header"] .logo { width: 34% }
+[data-role="header"] h1 { width: 66%; }
+
+body,h1,h2,h3,h4,h5,p,a{
+	font-weight:normal !important;
+}
+h1{
+	font-family: 'aileronregular';
+}
