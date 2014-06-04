@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile.custom.structure.css">
+    <link rel="stylesheet" href="css/jquery.mobile.noble.css">
+    <link rel="stylesheet" href="css/fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/tomstyle.css">
+    <link rel="stylesheet" href="css/pienstyle.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/functions.js"></script>
+</head>
+
+<body>
+	<!-- PAGE 1 -->
+    <div data-role="page" id="page1">
+	
+		<!-- header -->
+    	<div data-role="header" data-position="fixed">
+    		<div class="logo">
+				<img src="img/logo.png" class="ui-btn-left" />
+			</div>
+			<h1>Other people near you</h1>
+      	</div>
+		<!-- end of header -->
+
+		<!-- main content -->
+	   	<p>Google maps enzo met markers.</p>
+	   	<!-- end of main content -->
+
+	   	<!-- footer -->
+		<div data-role="footer" data-position="fixed">
+	      	<nav data-role="navbar" class="ui-navbar" role="navigation">
+	    		<ul>
+	    			<li>
+	    				<a href="#page1" class="ui-btn-active" data-transition="slide">
+	    					<img src="ikons/png/32/globe.png" alt="globe">
+						</a>
+					</li>
+					<li>
+	    				<a href="#page2" data-transition="slide">
+	    					<img src="ikons/png/32/inbox_in.png" alt="inbox_in">
+						</a>
+					</li>
+					<li>
+	    				<a href="#page3" data-transition="slide">
+	    					<img src="ikons/png/32/inbox_out.png" alt="inbox_out">
+						</a>
+					</li>
+	      		</ul>
+	  		</nav>     
+		</div>
+		<!-- end footer -->
+
+	</div>
+	<!-- END OF PAGE 1 -->
+
+
+	<!-- PAGE 2 -->
+    <div data-role="page" id="page2">
+	
+		<!-- header -->
+    	<div data-role="header" data-position="fixed">
+    		<div class="logo">
+				<img src="img/logo.png" class="ui-btn-left" />
+			</div>
+			<h1>Received messages</h1>
+      	</div>
+		<!-- end of header -->
+
+		<!-- main content -->
+		<ul data-role="listview">
+			<li>
+				<a href="#" class="ui-btn" data-transition="slide">
+					<ul>
+						<li>HOI, wat goed, blablabla..</li>
+						<li>Amsterdam, 24 mei 2014</li>
+					</ul>
+				</a>
+			</li>
+		</ul>
+	   	<!-- end of main content -->
+
+	   	<!-- footer -->
+		<div data-role="footer" data-position="fixed">
+	      	<nav data-role="navbar" class="ui-navbar" role="navigation">
+	    		<ul>
+	    			<li>
+	    				<a href="#page1" data-transition="slide">
+	    					<img src="ikons/png/32/globe.png" alt="globe">
+						</a>
+					</li>
+					<li>
+	    				<a href="#page2" class="ui-btn-active" data-transition="slide">
+	    					<img src="ikons/png/32/inbox_in.png" alt="inbox_in">
+						</a>
+					</li>
+					<li>
+	    				<a href="#page3" data-transition="slide">
+	    					<img src="ikons/png/32/inbox_out.png" alt="inbox_out">
+						</a>
+					</li>
+	      		</ul>
+	  		</nav>     
+		</div>
+		<!-- end footer -->
+
+	</div>
+	<!-- END OF PAGE 2 -->
+
+
+	<!-- PAGE 3 -->
+    <div data-role="page" id="page3">
+
+		<!-- header -->
+    	<div data-role="header" data-position="fixed">
+    		<div class="logo">
+				<img src="img/logo.png" class="ui-btn-left" />
+			</div>
+			<h1>Sent messages</h1>
+      	</div>
+		<!-- end of header -->
+
+		<!-- main content -->
+		<ul data-role="listview">
+			<li>
+				<?php foreach($sentArray as $arrays): 
+				?>
+				<a href="#" class="ui-btn" data-transition="slide">
+					<ul>
+						<li>Wauw dat was echt goed, blabla...</li>
+						<li>Eindhoven, 12 mei 2014</li>
+					</ul>
+				</a>
+			</li>
+		</ul>
+	   	<!-- end of main content -->
+
+	   	<!-- footer -->
+		<div data-role="footer" data-position="fixed">
+	      	<nav data-role="navbar" class="ui-navbar" role="navigation">
+	    		<ul>
+	    			<li>
+	    				<a href="#page1" data-transition="slide">
+	    					<img src="ikons/png/32/globe.png" alt="globe">
+						</a>
+					</li>
+					<li>
+	    				<a href="#page2" data-transition="slide">
+	    					<img src="ikons/png/32/inbox_in.png" alt="inbox_in">
+						</a>
+					</li>
+					<li>
+	    				<a href="#page3" class="ui-btn-active" data-transition="slide">
+	    					<img src="ikons/png/32/inbox_out.png" alt="inbox_out">
+						</a>
+					</li>
+	      		</ul>
+	  		</nav>     
+		</div>
+		<!-- end footer -->
+		
+    </div>
+    <!-- END OF PAGE 3 -->
+
+</body>
+</html>
