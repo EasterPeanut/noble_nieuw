@@ -9,8 +9,8 @@ $arr = array();
 //getchords.php?id=1&lat=51.451988&lon=5.480222 //
 
  //echo "SELECT * FROM message WHERE id_to = $id OR id_from = $id";
-$rs = mysqli_query($con,"SELECT *, ( 3959 * acos( cos( radians($my_lat) ) * cos( radians( user.location_lat ) ) * cos( radians( user.location_lon ) - radians(
-$my_lon) ) + sin( radians($my_lat) ) * sin( radians( user.location_lat ) ) ) ) AS distance FROM user ORDER BY distance LIMIT 100 ;");
+$rs = mysqli_query($con,"SELECT *, ( 3959 * acos( cos( radians($my_lat) ) * cos( radians( user.location_lat ) ) * cos( radians( user.location_lon ) - radians( $my_lon) ) + sin( radians($my_lat) ) * sin( radians( user.location_lat ) ) ) ) 
+AS distance FROM user HAVING distance < 20 ORDER BY distance LIMIT 100 ;");
  
 while($obj = mysqli_fetch_object($rs)) {
 $arr[] = $obj;
