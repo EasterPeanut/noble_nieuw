@@ -1,170 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/jquery.mobile.custom.structure.css">
-    <link rel="stylesheet" href="css/jquery.mobile.noble.css">
-    <link rel="stylesheet" href="css/fonts/stylesheet.css">
-    <link rel="stylesheet" href="css/tomstyle.css">
-    <link rel="stylesheet" href="css/pienstyle.css">
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="js/jquery.mobile.custom.min.js"></script>
-    <script src="js/functions.js"></script>
-</head>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
 
-<body>
-	<!-- PAGE 1 -->
-    <div data-role="page" id="page1">
-	
-		<!-- header -->
-    	<div data-role="header" data-position="fixed">
-    		<div class="logo">
-				<img src="img/logo.png" class="ui-btn-left" />
-			</div>
-			<h1>Other people near you</h1>
-      	</div>
-		<!-- end of header -->
+    http://www.apache.org/licenses/LICENSE-2.0
 
-		<!-- main content -->
-	   	<p>Google maps enzo met markers.</p>
-	   	<!-- end of main content -->
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="width=device-width, initial-scale=2"> 
+        <title>Noble</title>
 
-	   	<!-- footer -->
-		<div data-role="footer" data-position="fixed">
-	      	<nav data-role="navbar" class="ui-navbar" role="navigation">
-	    		<ul>
-	    			<li>
-	    				<a href="#page1" class="ui-btn-active ui-state-persist" data-transition="slide">
-	    					<img src="ikons/png/32/globe.png" alt="globe">
-						</a>
-					</li>
-					<li>
-	    				<a href="#page2" data-transition="slide">
-	    					<img src="ikons/png/32/inbox_in.png" alt="inbox_in">
-						</a>
-					</li>
-					<li>
-	    				<a href="#page3" data-transition="slide">
-	    					<img src="ikons/png/32/inbox_out.png" alt="inbox_out">
-						</a>
-					</li>
-	      		</ul>
-	  		</nav>     
-		</div>
-		<!-- end footer -->
+        <link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css">
+        <link rel="stylesheet" href="css/jquery.mobile.noble.min.css">
+        <link rel="stylesheet" href="css/fonts/stylesheet.css">
+        <link rel="stylesheet" href="css/tomstyle.css">
+        <link rel="stylesheet" href="css/pienstyle.css">
+        
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script src="js/jquery-1.8.3.min.js"></script>
 
-	</div>
-	<!-- END OF PAGE 1 -->
+        <script src="js/jquery.mobile.custom.min.js"></script>
+        <script src="js/functions.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </head>
+
+    <body>
+        <!-- PAGE 1 -->
+        <div data-role="page" id="page1">
+            <!-- header -->
+            <div data-role="header" data-position="fixed">
+                <div class="logo">
+                    <img src="img/logo.png" class="ui-btn-left" />
+                </div>
+                <h1>Other people near you</h1>
+            </div>
+            <!-- end of header -->
+            <!-- main content -->
+            <p>Google maps enzo met markers.</p>
+            <!-- end of main content -->
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed">
+                <nav data-role="navbar" class="ui-navbar" role="navigation">
+                    <ul>
+                        <li>
+                            <a href="#page1" class="ui-btn-active ui-state-persist" data-transition="slide">
+                                <img src="ikons/png/32/globe.png" alt="globe">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page2" data-transition="slide">
+                                <img src="ikons/png/32/inbox_in.png" alt="inbox_in">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page3" data-transition="slide">
+                                <img src="ikons/png/32/inbox_out.png" alt="inbox_out">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>     
+            </div>
+            <!-- end footer -->
+        </div>
+        <!-- END OF PAGE 1 -->
+        
+
+        <!-- PAGE 2 -->
+        <div data-role="page" id="page2">
+            <!-- header -->
+            <div data-role="header" data-position="fixed">
+                <div class="logo">
+                    <img src="img/logo.png" class="ui-btn-left" />
+                </div>
+                <h1>Received messages</h1>
+            </div>
+            <!-- end of header -->
+            <!-- main content -->
+            <ul data-role="listview">
+                <li>
+                    <a href="#" class="ui-btn" data-transition="slide">
+                        <ul>
+                            <li>HOI, wat goed, blablabla..</li>
+                            <li>Amsterdam, 24 mei 2014</li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+            <!-- end of main content -->
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed">
+                <nav data-role="navbar" class="ui-navbar" role="navigation">
+                    <ul>
+                        <li>
+                            <a href="#page1" data-transition="slide">
+                                <img src="ikons/png/32/globe.png" alt="globe">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page2" class="ui-btn-active ui-state-persist" data-transition="slide">
+                                <img src="ikons/png/32/inbox_in.png" alt="inbox_in">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page3" data-transition="slide">
+                                <img src="ikons/png/32/inbox_out.png" alt="inbox_out">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>     
+            </div>
+            <!-- end footer -->
+        </div>
+        <!-- END OF PAGE 2 -->
 
 
-	<!-- PAGE 2 -->
-    <div data-role="page" id="page2">
-	
-		<!-- header -->
-    	<div data-role="header" data-position="fixed">
-    		<div class="logo">
-				<img src="img/logo.png" class="ui-btn-left" />
-			</div>
-			<h1>Received messages</h1>
-      	</div>
-		<!-- end of header -->
-
-		<!-- main content -->
-		<ul data-role="listview">
-			<li>
-				<a href="#" class="ui-btn" data-transition="slide">
-					<ul>
-						<li>HOI, wat goed, blablabla..</li>
-						<li>Amsterdam, 24 mei 2014</li>
-					</ul>
-				</a>
-			</li>
-		</ul>
-	   	<!-- end of main content -->
-
-	   	<!-- footer -->
-		<div data-role="footer" data-position="fixed">
-	      	<nav data-role="navbar" class="ui-navbar" role="navigation">
-	    		<ul>
-	    			<li>
-	    				<a href="#page1" data-transition="slide">
-	    					<img src="ikons/png/32/globe.png" alt="globe">
-						</a>
-					</li>
-					<li>
-	    				<a href="#page2" class="ui-btn-active ui-state-persist" data-transition="slide">
-	    					<img src="ikons/png/32/inbox_in.png" alt="inbox_in">
-						</a>
-					</li>
-					<li>
-	    				<a href="#page3" data-transition="slide">
-	    					<img src="ikons/png/32/inbox_out.png" alt="inbox_out">
-						</a>
-					</li>
-	      		</ul>
-	  		</nav>     
-		</div>
-		<!-- end footer -->
-
-	</div>
-	<!-- END OF PAGE 2 -->
-
-
-	<!-- PAGE 3 -->
-    <div data-role="page" id="page3">
-
-		<!-- header -->
-    	<div data-role="header" data-position="fixed">
-    		<div class="logo">
-				<img src="img/logo.png" class="ui-btn-left" />
-			</div>
-			<h1>Sent messages</h1>
-      	</div>
-		<!-- end of header -->
-
-		<!-- main content -->
-		<ul data-role="listview">
-			<li>
-				<?php foreach($sentArray as $arrays): 
-				?>
-				<a href="#" class="ui-btn" data-transition="slide">
-					<ul>
-						<li>Wauw dat was echt goed, blabla...</li>
-						<li>Eindhoven, 12 mei 2014</li>
-					</ul>
-				</a>
-			</li>
-		</ul>
-	   	<!-- end of main content -->
-
-	   	<!-- footer -->
-		<div data-role="footer" data-position="fixed">
-	      	<nav data-role="navbar" class="ui-navbar" role="navigation">
-	    		<ul>
-	    			<li>
-	    				<a href="#page1" data-transition="slide">
-	    					<img src="ikons/png/32/globe.png" alt="globe">
-						</a>
-					</li>
-					<li>
-	    				<a href="#page2" data-transition="slide">
-	    					<img src="ikons/png/32/inbox_in.png" alt="inbox_in">
-						</a>
-					</li>
-					<li>
-	    				<a href="#page3" class="ui-btn-active ui-state-persist" data-transition="slide">
-	    					<img src="ikons/png/32/inbox_out.png" alt="inbox_out">
-						</a>
-					</li>
-	      		</ul>
-	  		</nav>     
-		</div>
-		<!-- end footer -->
-		
-    </div>
-    <!-- END OF PAGE 3 -->
-
-</body>
+        <!-- PAGE 3 -->
+        <div data-role="page" id="page3">
+            <!-- header -->
+            <div data-role="header" data-position="fixed">
+                <div class="logo">
+                    <img src="img/logo.png" class="ui-btn-left" />
+                </div>
+                <h1>Sent messages</h1>
+            </div>
+            <!-- end of header -->
+            <!-- main content -->
+            <ul data-role="listview">
+                <li>
+                    <a href="#" class="ui-btn" data-transition="slide">
+                        <ul>
+                            <li>Wauw dat was echt goed, blabla...</li>
+                            <li>Eindhoven, 12 mei 2014</li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+            <!-- end of main content -->
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed">
+                <nav data-role="navbar" class="ui-navbar" role="navigation">
+                    <ul>
+                        <li>
+                            <a href="#page1" data-transition="slide">
+                                <img src="ikons/png/32/globe.png" alt="globe">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page2" data-transition="slide">
+                                <img src="ikons/png/32/inbox_in.png" alt="inbox_in">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page3" class="ui-btn-active ui-state-persist" data-transition="slide">
+                                <img src="ikons/png/32/inbox_out.png" alt="inbox_out">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>     
+            </div>
+            <!-- end footer -->
+            
+        </div>
+        <!-- END OF PAGE 3 -->
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
 </html>
