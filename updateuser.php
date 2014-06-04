@@ -1,8 +1,11 @@
 <?php include 'connection.php';
-$id = $_GET["lat"];
+$id = $_GET["id"];
 $lat = $_GET["lat"];
 $lon = $_GET["lon"];
 
 if(!$id && !$lat && !$lon) {
-	$result = mysqli_query($con,"SELECT * FROM projecten");
+	 mysqli_query($con,"UPDATE user SET location_lat=$lat AND location_lon=$lon
+WHERE userid='".$id."'");
+	 mysqli_close($con);
 }
+?>
