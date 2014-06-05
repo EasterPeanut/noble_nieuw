@@ -83,7 +83,7 @@ function loadReceivedMessages(){
             });
 }
 
-$(document).on('click touchstart','a', function () {
+$(document).on('click touchstart','.ui-navbar .ui-btn', function () {
 	loadSentMessages();
 	loadReceivedMessages();
 	console.log("haaaa");
