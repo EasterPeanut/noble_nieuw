@@ -42,3 +42,15 @@ body {
 	width:32px;
 	height:32px;
 }
+.page3-list ul, .page2-list  ul {
+	list-style:none;
+	margin-left:-40px;
+    
+}
+.page3-list ul li, .page2-list  ul li{
+	 white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+    text-shadow:none;
+
+}

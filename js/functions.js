@@ -23,7 +23,6 @@ $(document).on('pagecreate','#page1',function(){
 //APPARAAT ID
 var id = 1;
 
-
 function loadSentMessages(){
 	$( ".page3-list" ).empty();
 	 $.ajax({ 
@@ -69,7 +68,7 @@ function loadReceivedMessages(){
                            for (var prop in obj) {
                             if((prop == "id_to") && (obj['id_to'] == id)) {
                                  $('.page2-list').append('<li><a href="#" class="ui-btn" data-transition="slide"><ul><li>'+obj.message+'</li><li>'+obj.date+ '</li></ul></a></li>');
-              
+              					
                             }
                              
                            }
