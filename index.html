@@ -93,28 +93,7 @@
             <!-- main content -->
             <ul data-role="listview" class="page2-list">
                 <script>
-                $.ajax({ 
-                type: 'GET', 
-                url: "getmessages.php?id="+id+"", 
-                dataType: 'json',
-                success: function (data) { 
-                   
-                    $.each(data, function(index, element) {
-                        console.log(element[1].date);
-                        for (var key in element) {
-                           var obj = element[key];
-                           for (var prop in obj) {
-                            if((prop == "id_to") && (obj['id_to'] == id)) {
-                                 $('.page2-list').append('<li><a href="#" class="ui-btn" data-transition="slide"><ul><li>'+obj.message+'</li><li>'+obj.date+ '</li></ul></a></li>');
-              
-                            }
-                             
-                           }
-                        }
-                        
-                    });
-                }
-            });
+               loadReceivedMessages();
             
                 </script>
             </ul>
@@ -159,28 +138,7 @@
             <!-- main content -->
             <ul data-role="listview" class="page3-list">
                   <script>
-                $.ajax({ 
-                type: 'GET', 
-                url: "getmessages.php?id="+id+"", 
-                dataType: 'json',
-                success: function (data) { 
-                   
-                    $.each(data, function(index, element) {
-                        console.log(element[1].date);
-                        for (var key in element) {
-                           var obj = element[key];
-                           for (var prop in obj) {
-                            if((prop == "id_from") && (obj['id_from'] == id)) {
-                                 $('.page3-list').append('<li><a href="#" class="ui-btn" data-transition="slide"><ul><li>'+obj.message+'</li><li>'+obj.date+ '</li></ul></a></li>');
-              
-                            }
-                             
-                           }
-                        }
-                        
-                    });
-                }
-            });
+               loadSentMessages();
             
                 </script>
             </ul>
