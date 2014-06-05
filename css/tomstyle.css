@@ -37,3 +37,8 @@ body {
 	background:#ededed !important;
 	padding-bottom:5px !important;
 }
+
+.ui-navbar img {
+	width:32px;
+	height:32px;
+}

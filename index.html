@@ -21,7 +21,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4643 -->
         <meta name="viewport" content="width=device-width, initial-scale=2"> 
         <title>Noble</title>
 
@@ -59,17 +59,17 @@
                     <ul>
                         <li>
                             <a href="#page1" class="ui-btn-active ui-state-persist" data-transition="slide">
-                                <img src="ikons/png/32/globe.png" alt="globe">
+                                <img src="ikons/png/64/globe.png" alt="globe">
                             </a>
                         </li>
                         <li>
                             <a href="#page2" data-transition="slide">
-                                <img src="ikons/png/32/inbox_in.png" alt="inbox_in">
+                                <img src="ikons/png/64/inbox_in.png" alt="inbox_in">
                             </a>
                         </li>
                         <li>
                             <a href="#page3" data-transition="slide">
-                                <img src="ikons/png/32/inbox_out.png" alt="inbox_out">
+                                <img src="ikons/png/64/inbox_out.png" alt="inbox_out">
                             </a>
                         </li>
                     </ul>
@@ -91,15 +91,32 @@
             </div>
             <!-- end of header -->
             <!-- main content -->
-            <ul data-role="listview">
-                <li>
-                    <a href="#" class="ui-btn" data-transition="slide">
-                        <ul>
-                            <li>HOI, wat goed, blablabla..</li>
-                            <li>Amsterdam, 24 mei 2014</li>
-                        </ul>
-                    </a>
-                </li>
+            <ul data-role="listview" class="page2-list">
+                <script>
+                $.ajax({ 
+                type: 'GET', 
+                url: "getmessages.php?id="+id+"", 
+                dataType: 'json',
+                success: function (data) { 
+                   
+                    $.each(data, function(index, element) {
+                        console.log(element[1].date);
+                        for (var key in element) {
+                           var obj = element[key];
+                           for (var prop in obj) {
+                            if((prop == "id_to") && (obj['id_to'] == id)) {
+                                 $('.page2-list').append('<li><a href="#" class="ui-btn" data-transition="slide"><ul><li>'+obj.message+'</li><li>'+obj.date+ '</li></ul></a></li>');
+              
+                            }
+                             
+                           }
+                        }
+                        
+                    });
+                }
+            });
+            
+                </script>
             </ul>
             <!-- end of main content -->
             <!-- footer -->
@@ -108,17 +125,17 @@
                     <ul>
                         <li>
                             <a href="#page1" data-transition="slide">
-                                <img src="ikons/png/32/globe.png" alt="globe">
+                                <img src="ikons/png/64/globe.png" alt="globe">
                             </a>
                         </li>
                         <li>
                             <a href="#page2" class="ui-btn-active ui-state-persist" data-transition="slide">
-                                <img src="ikons/png/32/inbox_in.png" alt="inbox_in">
+                                <img src="ikons/png/64/inbox_in.png" alt="inbox_in">
                             </a>
                         </li>
                         <li>
                             <a href="#page3" data-transition="slide">
-                                <img src="ikons/png/32/inbox_out.png" alt="inbox_out">
+                                <img src="ikons/png/64/inbox_out.png" alt="inbox_out">
                             </a>
                         </li>
                     </ul>
@@ -140,15 +157,32 @@
             </div>
             <!-- end of header -->
             <!-- main content -->
-            <ul data-role="listview">
-                <li>
-                    <a href="#" class="ui-btn" data-transition="slide">
-                        <ul>
-                            <li>Wauw dat was echt goed, blabla...</li>
-                            <li>Eindhoven, 12 mei 2014</li>
-                        </ul>
-                    </a>
-                </li>
+            <ul data-role="listview" class="page3-list">
+                  <script>
+                $.ajax({ 
+                type: 'GET', 
+                url: "getmessages.php?id="+id+"", 
+                dataType: 'json',
+                success: function (data) { 
+                   
+                    $.each(data, function(index, element) {
+                        console.log(element[1].date);
+                        for (var key in element) {
+                           var obj = element[key];
+                           for (var prop in obj) {
+                            if((prop == "id_from") && (obj['id_from'] == id)) {
+                                 $('.page3-list').append('<li><a href="#" class="ui-btn" data-transition="slide"><ul><li>'+obj.message+'</li><li>'+obj.date+ '</li></ul></a></li>');
+              
+                            }
+                             
+                           }
+                        }
+                        
+                    });
+                }
+            });
+            
+                </script>
             </ul>
             <!-- end of main content -->
             <!-- footer -->
@@ -157,17 +191,17 @@
                     <ul>
                         <li>
                             <a href="#page1" data-transition="slide">
-                                <img src="ikons/png/32/globe.png" alt="globe">
+                                <img src="ikons/png/64/globe.png" alt="globe">
                             </a>
                         </li>
                         <li>
                             <a href="#page2" data-transition="slide">
-                                <img src="ikons/png/32/inbox_in.png" alt="inbox_in">
+                                <img src="ikons/png/64/inbox_in.png" alt="inbox_in">
                             </a>
                         </li>
                         <li>
                             <a href="#page3" class="ui-btn-active ui-state-persist" data-transition="slide">
-                                <img src="ikons/png/32/inbox_out.png" alt="inbox_out">
+                                <img src="ikons/png/64/inbox_out.png" alt="inbox_out">
                             </a>
                         </li>
                     </ul>

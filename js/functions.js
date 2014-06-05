@@ -33,3 +33,5 @@ var content = screen - header - footer - contentCurrent - 94;
 $(".ui-content").height(content);
 });
 
+var id = 1;
+
