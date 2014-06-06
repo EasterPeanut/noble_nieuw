@@ -44,8 +44,9 @@ body {
 }
 .page3-list ul, .page2-list  ul {
 	list-style:none;
-	margin-left:-40px;
-    
+	margin-left:0px;
+    background:url('../ikons/png/64/collapse_arrow_alt.png') left center no-repeat;
+    background-size:16px 16px;
 }
 .page3-list ul li, .page2-list  ul li{
 	 white-space: nowrap;
