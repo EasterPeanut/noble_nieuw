@@ -43,7 +43,7 @@ function loadSentMessages(){
              
                  
                             if((prop == "id_from") && (obj['id_from'] == id)) {
-                                 $('.page3-list').append('<li><a href="#" class="ui-btn" data-transition="slide"><ul><li class="message_list">'+obj.message+'</li><li class="location_list"><img src="ikons/png/64/pin_1.png" alt="location">  '+obj.location_name+'</li><li class="date_list">'+obj.date+'</li></ul></a></li>');
+                                 $('.page3-list').append('<li><a href="#" class="ui-btn" data-transition="slide"><ul><li class="message_list">'+obj.message+'</li><li class="location_list"><img src="ikons/png/64/pin_1.png" alt="location">&nbsp;&nbsp;  '+obj.location_name+'</li><li class="date_list"><img src="ikons/png/64/calendar.png" alt="location">&nbsp;&nbsp; '+obj.date+'</li></ul></a></li>');
               
                             }
                              
@@ -78,7 +78,7 @@ function loadReceivedMessages(){
                          
 
                             if((prop == "id_to") && (obj['id_to'] == id)) {
-                                 $('.page2-list').append('<li><a href="#" class="ui-btn" data-transition="slide"><ul><li>'+obj.message+'</li><li class="location_list"><img src="ikons/png/64/pin_1.png" alt="location"> '+obj.location_name+'</li><li class="date_list">'+obj.date+'</li></ul></a></li>');
+                                 $('.page2-list').append('<li><a href="#" class="ui-btn" data-transition="slide"><ul><li class="message_list">'+obj.message+'</li><li class="location_list"><img src="ikons/png/64/pin_1.png" alt="location">&nbsp;&nbsp; '+obj.location_name+'</li><li class="date_list"><img src="ikons/png/64/calendar.png" alt="location">&nbsp;&nbsp; '+obj.date+'</li></ul></a></li>');
               					
                             }
                              

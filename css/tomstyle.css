@@ -91,3 +91,8 @@ margin-bottom:10px;
 	background:url('../ikons/png/64/collapse_arrow_alt_up.png') left center no-repeat !important;
 	background-size:16px 16px !important;
 }
+
+.collapse_background:hover {
+	background:url('../ikons/png/64/collapse_arrow_alt_up.png') left center no-repeat !important;
+	background-size:16px 16px !important;
+}
