@@ -48,10 +48,24 @@ body {
     background:url('../ikons/png/64/collapse_arrow_alt.png') left center no-repeat;
     background-size:16px 16px;
 }
+.page3-list ul img, .page2-list  ul img{
+	width:10px;
+	height:10px;
+	display:inline;
+}
 .page3-list ul li, .page2-list  ul li{
 	 white-space: nowrap;
     overflow:hidden !important;
     text-overflow: ellipsis;
     text-shadow:none;
 
+}
+.location_list {
+	font-size:12px;
+	margin-top:5px;
+}
+.date_list {
+	display:none;
+	font-size:12px;
+	margin-top:5px;
 }
