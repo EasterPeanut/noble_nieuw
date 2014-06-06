@@ -43,7 +43,7 @@ function loadSentMessages(){
              
                  
                             if((prop == "id_from") && (obj['id_from'] == id)) {
-                                 $('.page3-list').append('<li><a href="#" class="ui-btn" data-transition="slide"><ul><li>'+obj.message+'</li><li class="location_list"><img src="ikons/png/64/pin_1.png" alt="location">  '+obj.location_name+'</li><li class="date_list">'+obj.date+'</li></ul></a></li>');
+                                 $('.page3-list').append('<li><a href="#" class="ui-btn" data-transition="slide"><ul><li class="message_list">'+obj.message+'</li><li class="location_list"><img src="ikons/png/64/pin_1.png" alt="location">  '+obj.location_name+'</li><li class="date_list">'+obj.date+'</li></ul></a></li>');
               
                             }
                              
@@ -95,7 +95,16 @@ function loadReceivedMessages(){
 
 
 $(document).on('click touchstart','.page2-list ul, .page3-list ul', function () {
-$(this).children('.date_list').css( "display", "block" );
+  if($(this).children('.date_list').hasClass("collapse_display" )) {
+    $(this).children('.date_list').removeClass("collapse_display" );
+    $(this).children('.message_list').removeClass("collapse" );
+    $(this).removeClass("collapse_background" );
+  } else {
+$(this).children('.date_list').addClass("collapse_display" );
+$(this).children('.message_list').addClass("collapse" );
+$(this).addClass("collapse_background" );
+  }
+
    });
 $(document).on('click touchstart','.ui-navbar .ui-btn', function () {
 	loadSentMessages();
