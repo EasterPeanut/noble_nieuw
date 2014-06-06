@@ -109,5 +109,4 @@ $(this).addClass("collapse_background" );
 $(document).on('click touchstart','.ui-navbar .ui-btn', function () {
 	loadSentMessages();
 	loadReceivedMessages();
-  checkLists();
 	 });
